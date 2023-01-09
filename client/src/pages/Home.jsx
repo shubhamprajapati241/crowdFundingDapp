@@ -19,7 +19,13 @@ const Home = () => {
 
     // 2.18.45 => home, detials , loader
   }, [address, contract]);
-  return <div>Home</div>;
+  return (
+    <DisplayCampaigns
+      title="All Campaign"
+      isLoading={isLoading}
+      campaigns={campaigns}
+    />
+  );
 };
 
 export default Home;

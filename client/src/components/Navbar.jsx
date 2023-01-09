@@ -5,6 +5,7 @@ import { CustomButton } from "./";
 import { logo, menu, search, thirdweb } from "../assets";
 import { navlinks } from "../constants";
 import { useStateContext } from "../context";
+import Avatar from "react-avatar";
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -41,12 +42,19 @@ const Navbar = () => {
         />
 
         <Link to="/profile">
-          <div className="w-[52px] h-[52px] rounded-full bg-[#2c2f32] flex justify-center items-center cursor-pointer">
+          <div>
+            <Avatar
+              size="52"
+              round={true}
+              alt="Remy Sharp"
+              src="https://avatars.githubusercontent.com/u/61042463?s=400&u=c57a840c714c6d0ac4e0691345436d467fdfd5b9&v=4"
+            />
+            {/* <div className="w-[52px] h-[52px] rounded-full bg-[#2c2f32] flex justify-center items-center cursor-pointer"></div>
             <img
               src={thirdweb}
               alt="user"
               className="w-[60%] h-[60%] object-contain"
-            />
+            /> */}
           </div>
         </Link>
       </div>
